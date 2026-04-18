@@ -37,7 +37,7 @@ The database consists of the following 7 interrelated tables:
 * **`hastane_verileri.sql`**: The output of the Python script containing the DML (`INSERT`) statements for robust testing.
 * **`Milestone_Report.pdf`**: The detailed 2-3 page technical report.
 
-## 🚀 How to Run
+##  How to Run
 1. Execute `schema.sql` in your SQLite environment to build the tables.
 2. Execute `hastane_verileri.sql` to populate the database with procedurally generated mock data.
 3. Test the sample queries provided in the Milestone Report.
