@@ -1,7 +1,5 @@
--- PYTHON FAKER İLE ÜRETİLMİŞ HASTANE VERİ SETİ
 PRAGMA foreign_keys = ON;
 
--- 1. POLİKLİNİKLER
 INSERT INTO departments (name) VALUES ('Kardiyoloji');
 INSERT INTO departments (name) VALUES ('Dahiliye');
 INSERT INTO departments (name) VALUES ('Ortopedi');
@@ -13,7 +11,6 @@ INSERT INTO departments (name) VALUES ('KBB');
 INSERT INTO departments (name) VALUES ('Genel Cerrahi');
 INSERT INTO departments (name) VALUES ('Cildiye');
 
--- 2. DOKTORLAR
 INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Taşkan', 'Soylu', 9);
 INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Ayten', 'Zorlu', 1);
 INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Pembesin', 'Ülker', 7);
@@ -45,7 +42,6 @@ INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Uğurkan', '
 INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Bidayet', 'Arslan', 7);
 INSERT INTO doctors (first_name, last_name, department_id) VALUES ('Bariş', 'Gülen', 10);
 
--- 3. HASTALAR
 INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALUES ('10656393430', 'Öğr. Alabezek Sabihe Erdoğan', '1992-08-26', '{"blood_type": "B+", "allergies": ["Penisilin"], "weight_kg": 57, "height_cm": 161}');
 INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALUES ('36016121756', 'Tanbay Gülen', '2014-11-21', '{"blood_type": "0-", "allergies": ["Kedi Tüyü", "Penisilin"], "weight_kg": 106, "height_cm": 185}');
 INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALUES ('96756917579', 'Risalet Dilder Çetin', '1945-10-29', '{"blood_type": "AB+", "allergies": ["Yok"], "weight_kg": 107, "height_cm": 164}');
@@ -547,7 +543,6 @@ INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALU
 INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALUES ('68637955508', 'Ruhide Nefiye Demirel Arslan', '1959-05-30', '{"blood_type": "AB+", "allergies": ["Yok", "Kedi Tüyü"], "weight_kg": 106, "height_cm": 189}');
 INSERT INTO patients (tc_kimlik, full_name, birth_date, medical_attributes) VALUES ('40301887622', 'Azade Niğmet Sezer Soylu', '1974-02-09', '{"blood_type": "A+", "allergies": ["Toz", "Aspirin"], "weight_kg": 64, "height_cm": 161}');
 
--- 4. RANDEVULAR VE 5. TIBBİ KAYITLAR
 INSERT INTO appointments (patient_id, doctor_id, appointment_datetime, status) VALUES (288, 25, '2026-04-16 03:59:43', 'Tamamlandı');
 INSERT INTO medical_records (appointment_id, diagnosis, notes) VALUES (1, 'Sağlıklı', 'Detaylı muayene yapıldı.');
 INSERT INTO appointments (patient_id, doctor_id, appointment_datetime, status) VALUES (147, 17, '2026-04-24 18:36:34', 'İptal');
@@ -2556,7 +2551,6 @@ INSERT INTO appointments (patient_id, doctor_id, appointment_datetime, status) V
 INSERT INTO appointments (patient_id, doctor_id, appointment_datetime, status) VALUES (1, 20, '2026-04-28 21:54:34', 'İptal');
 INSERT INTO appointments (patient_id, doctor_id, appointment_datetime, status) VALUES (353, 3, '2026-04-25 09:40:45', 'Bekliyor');
 
--- 6. İLAÇLAR
 INSERT INTO medications (name, dosage) VALUES ('Calpol 500mg', 'Günde 1 kez');
 INSERT INTO medications (name, dosage) VALUES ('Majezik 400mg', 'Günde 2 kez');
 INSERT INTO medications (name, dosage) VALUES ('Arveles 100mg', 'Günde 1 kez');
@@ -2578,7 +2572,6 @@ INSERT INTO medications (name, dosage) VALUES ('Arveles 500mg', 'Günde 1 kez');
 INSERT INTO medications (name, dosage) VALUES ('Augmentin 100mg', 'Günde 2 kez');
 INSERT INTO medications (name, dosage) VALUES ('Arveles 400mg', 'Günde 2 kez');
 
--- 7. REÇETELER
 INSERT INTO prescriptions (record_id, medication_id, instructions) VALUES (45, 5, 'Yemekten sonra bol su ile');
 INSERT INTO prescriptions (record_id, medication_id, instructions) VALUES (444, 4, 'Yemekten sonra bol su ile');
 INSERT INTO prescriptions (record_id, medication_id, instructions) VALUES (206, 20, 'Yemekten sonra bol su ile');
